@@ -15,7 +15,7 @@ module.exports = {
           50: '#0F5257'
         },
         yellow: {
-          50: '#F8E4A0'
+          50: '#9BCD7A'
         }
       }
     },

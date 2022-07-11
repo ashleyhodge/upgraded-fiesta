@@ -15,21 +15,21 @@ function Nav() {
         </div>
     </div>
 </nav>
-<nav class="bg-yellow-50 dark:bg-yellow-50">
+<nav class="bg-purple-50 dark:bg-purple-50">
     <div class="py-3 px-4 mx-auto max-w-screen-xl md:px-6">
         <div class="flex items-center">
             <ul class="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
                 <li>
-                    <a href="#" class="drop-shadow-xl shadow-black text-white dark:text-white hover:underline" aria-current="page">Home</a>
+                    <a href="#" class="drop-shadow-xl shadow-black text-white dark:text-white hover:underline hover:text-midgreen-50" aria-current="page">Home</a>
                 </li>
                 <li>
-                    <a href="#" class="drop-shadow-xl shadow-black text-white dark:text-white hover:underline">Shop</a>
+                    <a href="#" class="drop-shadow-xl shadow-black text-white dark:text-white hover:underline hover:text-midgreen-50">Shop</a>
                 </li>
                 <li>
-                    <a href="#" class="drop-shadow-xl shadow-black text-white dark:text-white hover:underline">Blog</a>
+                    <a href="#" class="drop-shadow-xl shadow-black text-white dark:text-white hover:underline hover:text-midgreen-50">Blog</a>
                 </li>
                 <li>
-                    <a href="#" class="drop-shadow-xl shadow-black text-white dark:text-white hover:underline">Book Astrological Reading!</a>
+                    <a href="#" class="drop-shadow-xl shadow-black text-white dark:text-white hover:underline hover:text-midgreen-50">Book Astrological Reading!</a>
                 </li>
             </ul>
         </div>
