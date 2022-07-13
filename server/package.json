@@ -10,7 +10,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "watch": "modemon"
+    "watch": "nodemon",
+    "seed": "node config/seeds.js"
   },
   "name": "server",
   "version": "1.0.0",
