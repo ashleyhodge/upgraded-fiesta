@@ -40,13 +40,16 @@ function Nav() {
         <div class="flex items-center w-full sm:block ">
             <ul className={
           (showNav ? "left-0" : "-left-full") +
-          " sm:justify-between sm:static fixed  bottom-15 top-12 sm:flex sm:space-x-7 items-center sm:bg-transparent bg-purple-100  sm:w-full w-full sm:text-purple-100 text-white sm:space-y-0 space-y-5 p-2 transition-left"
+          " sm:justify-between sm:static fixed rounded-xl bottom-15 top-12 sm:flex sm:space-x-7 items-center sm:bg-transparent bg-purple-100  sm:w-full w-full sm:text-purple-100 text-white sm:space-y-0 space-y-5 p-2 transition-left"
         }>
                 <li>
                     <a href="#" class="drop-shadow-lg shadow-black text-purple-50 dark:text-purple-50 hover:underline hover:text-white" aria-current="page">Home</a>
                 </li>
                 <li>
                     <a href="#" class="drop-shadow-lg shadow-black text-purple-50 dark:text-purple-50 hover:underline hover:text-white">Shop</a>
+                </li>
+                <li>
+                    <a href="#" class="drop-shadow-lg shadow-black text-purple-50 dark:text-purple-50 hover:underline hover:text-white">Gallery</a>
                 </li>
                 <li>
                     <a href="#" class="drop-shadow-lg shadow-black text-purple-50 dark:text-purple-50 hover:underline hover:text-white">Blog</a>
