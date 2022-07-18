@@ -1,7 +1,12 @@
 import React from "react";
+import { useQuery } from '@apollo/client';
+import { QUERY_ALL_PRODUCTS } from "../../utils/queries";
+
 import { Card } from 'flowbite-react'
 
 function ProductList() {
+  const {loading, data } = useQuery(QUERY_ALL_PRODUCTS);
+  
   return (
     <div className="container pt-10 2xl:mx-8 bg-purple-50">
       <div className=" mx-5 ">

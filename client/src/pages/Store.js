@@ -1,9 +1,9 @@
-import React from "react";
-import ProductList from "../components/ProductList";
+import React from 'react';
+import ProductList from '../components/productList';
 
 const Store = () => {
-  return(
-    <div className="container">
+  return (
+    <div className='container'>
       <ProductList />
     </div>
   )
