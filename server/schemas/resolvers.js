@@ -1,9 +1,11 @@
 const { Product } = require('../models');
 
 const resolvers = {
-  product: async (parent, { _id }) => {
-    return await Product.findById(_id)
+  Query: {
+    helloWorld: () => {
+      return 'Hello World!';
+    }
   }
-}
+};
 
 module.exports = resolvers;
