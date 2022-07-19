@@ -1,26 +1,15 @@
-import React from 'react';
-import { useQuery } from '@apollo/client';
-import { QUERY_ALL_PRODUCTS } from '../utils/queries';
+import React, { useState } from 'react';
+
 import ProductList from '../components/productList';
 
 const Store = () => {
-    // use useQuery hook to make query request
-  const {loading, data } = useQuery(QUERY_ALL_PRODUCTS);
-  const products = data?.products || [];
-  console.log(products)
+  const [currentCategory, setCategory] = useState("");
   
   return (
-<main>
-  <div className="flex-row justify-space-between">
-    <div className="col-12 mb-3">
-      {loading ? (
-        <div>Loading...</div>
-      ) : (
-        <ProductList products={products}  />
-      )}
+    <div className="bg-purple-50">
+      
+      <ProductList currentCategory={currentCategory} />
     </div>
-  </div>
-</main>
   )
 }
 

@@ -1,38 +1,49 @@
-import React from "react";
-
-
+import React from 'react';
+import { useQuery } from '@apollo/client';
 import { Card } from 'flowbite-react'
+import ProductItem from '../ProductItem';
+import { QUERY_PRODUCTS } from '../../utils/queries';
 
-function ProductList({ products }) {
-  return(
 
-    <div className="container pt-10 2xl:mx-8 bg-purple-50">
-      <div className=" mx-5 ">
-        <div className=" grid grid-cols-1 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-4  md:grid-cols-3  sm:grid-cols-2 gap-8 ">
-          <div className="max-w-sm">
-            
-              {products &&
-                products.map(product => (
-                  <Card key={product._id}>
-                    <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                      {product.name}
-                    </h5>
-                    <div className="flex items-center justify-between">
-                      <span className="text-3xl font-bold text-gray-900 dark:text-white">
-                        ${product.price}
-                      </span>
-                      <button className="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Add to cart
-                      </button>
-                    </div>
-                  </Card>
-                ))
-              }
-          </div>
+function ProductList({ currentCategory }) {
+  const { loading, data } = useQuery(QUERY_PRODUCTS);
+
+  const products = data?.products || [];
+
+  function filterProducts() {
+    if (!currentCategory) {
+      return products;
+    }
+
+    return products.filter(
+      (product) => product.category._id === currentCategory
+    );
+  }
+
+  return (
+    
+    <div className="my-5 ">
+      {products.length ? (
+        <Card>
+        <div className="grid grid-cols-1 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-4  md:grid-cols-3  sm:grid-cols-2 gap-8">
+          {filterProducts().map((product) => (
+            <ProductItem
+              key={product._id}
+              _id={product._id}
+              image={product.image}
+              name={product.name}
+              price={product.price}
+              quantity={product.quantity}
+            />
+          ))}
         </div>
-      </div>
+        </Card>
+      ) : (
+        <h3>You haven't added any products yet!</h3>
+      )}
     </div>
-  )
+
+  );
 }
 
 export default ProductList;
