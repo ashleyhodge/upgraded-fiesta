@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { FaTiktok } from "react-icons/fa"
 import { BsFacebook, BsInstagram, BsYoutube} from "react-icons/bs"
 import { AiOutlineMenu } from "react-icons/ai";
+import { Link } from 'react-router-dom'
 
 
 function Nav() {
@@ -46,7 +47,7 @@ function Nav() {
                     <a href="#" class="drop-shadow-lg shadow-black text-purple-50 dark:text-purple-50 hover:underline hover:text-white" aria-current="page">Home</a>
                 </li>
                 <li>
-                    <a href="#" class="drop-shadow-lg shadow-black text-purple-50 dark:text-purple-50 hover:underline hover:text-white">Shop</a>
+                    <Link to="/shop" className="drop-shadow-lg shadow-black text-purple-50 dark:text-purple-50 hover:underline hover:text-white">Shop</Link>
                 </li>
                 <li>
                     <a href="#" class="drop-shadow-lg shadow-black text-purple-50 dark:text-purple-50 hover:underline hover:text-white">Gallery</a>

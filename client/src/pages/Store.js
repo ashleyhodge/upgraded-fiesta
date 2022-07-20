@@ -6,7 +6,7 @@ const Store = () => {
   const [currentCategory, setCategory] = useState("");
   
   return (
-    <div className="bg-purple-50">
+    <div >
       
       <ProductList currentCategory={currentCategory} />
     </div>
