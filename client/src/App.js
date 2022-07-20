@@ -10,6 +10,7 @@ import {
 
 import Nav from './components/Nav';
 import Store from './pages/Store';
+import OrderDetail from './pages/ProductDetail';
 
 
 
@@ -34,6 +35,10 @@ function App() {
             <Route
               path='/shop'
               element={<Store />}
+            />
+            <Route
+              path='/shop/products/:id'
+              element={<OrderDetail />}
             />
           </Routes>
         </div>

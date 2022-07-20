@@ -1,6 +1,6 @@
 import React from "react";
-
-import { Card } from 'flowbite-react'
+import { Link } from 'react-router-dom';
+import { Card } from 'flowbite-react';
 
 function ProductItem(item) {
   const {
@@ -12,7 +12,9 @@ function ProductItem(item) {
   } = item;
   return(
     <Card>
-      <img src={`/images/${image}`} alt={name} />
+      <Link to={`products/${_id}`}>
+        <img src={`/images/${image}`} alt={name} />
+      </Link>
       <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
         {name}
       </h5>
