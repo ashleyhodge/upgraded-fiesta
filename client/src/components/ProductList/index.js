@@ -24,7 +24,7 @@ function ProductList({ currentCategory }) {
     <div className="my-5 px-8" >
       {products.length ? (
         <div className='container'>
-          <div className="grid grid-cols-1 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-4  md:grid-cols-3  sm:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-4  md:grid-cols-3  sm:grid-cols-2 gap-8">
             {filterProducts().map((product) => (
               <ProductItem
                 key={product._id}
