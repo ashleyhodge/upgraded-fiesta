@@ -21,29 +21,29 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: 'Tin of Cookies',
+      name: 'USB Crochet Flower Cover - Purple',
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+      image: 'usb-green-purple.jpg',
       category: categories[0]._id,
-      price: 2.99,
+      price: 20.99,
       quantity: 500
     },
     {
-      name: 'Canned Coffee',
+      name: 'USB Crochet Flower Cover - Red',
       description:
         'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
+      image: 'usb-red-pink.jpg',
       category: categories[0]._id,
       price: 1.99,
       quantity: 500
     },
     {
-      name: 'Toilet Paper',
+      name: 'Keychain - Brown',
       category: categories[1]._id,
       description:
         'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
+      image: 'brown-keychain.jpg',
       price: 7.99,
       quantity: 20
     },
