@@ -11,22 +11,24 @@ function ProductItem(item) {
     quantity
   } = item;
   return(
-    <Card>
+    <div class="card flex flex-col max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 "> 
       <Link to={`products/${_id}`}>
-        <img src={`/images/${image}`} alt={name} />
+        <img className="rounded-t-lg pb-3" src={`/images/${image}`} alt={name} />
       </Link>
-      <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+      <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white pb-3 text-center">
         {name}
       </h5>
-      <div className="flex items-center justify-between">
-        <span className="text-2xl content-center font-bold text-gray-900 dark:text-white ">
+      <div className="flex items-center justify-center">
+        <span className="text-2xl content-center font-bold text-gray-900 dark:text-white pb-3 ">
           ${price}
         </span>
       </div>
-      <button className="rounded-lg bg-purple-200 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+      <div className="mt-auto flex items-center justify-center pb-2">
+      <button className="text-white bg-purple-200 hover:bg-purple-100 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
           Add to cart
       </button>
-    </Card>
+      </div>
+  </div>
   )
 }
 
