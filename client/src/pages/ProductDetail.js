@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
+import { IoMdArrowRoundBack } from 'react-icons/io'
 
 import { QUERY_PRODUCTS } from '../utils/queries';
 
@@ -25,7 +26,8 @@ function OrderDetail() {
   return (
     <>
     {currentProduct ? (
-      <section class="text-gray-700 body-font overflow-hidden bg-white">
+    <section class="text-gray-700 body-font overflow-hidden bg-white">
+        <Link to="/shop"><IoMdArrowRoundBack className='w-16 h-6 mt-6'/> </Link>
     <div class="container px-5 py-24 mx-auto">
     <div class="lg:w-4/5 mx-auto flex flex-wrap">
       <img alt={currentProduct.name} class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200" src={`/images/${currentProduct.image}`}/>
