@@ -11,7 +11,10 @@ import {
 import Nav from './components/Nav';
 import Store from './pages/Store';
 import OrderDetail from './pages/ProductDetail';
-
+import Home from './pages/Home';
+import Gallery from './pages/Gallery';
+import Blog from './pages/Blog';
+import Booking from './pages/Booking'
 
 
 const httpLink = createHttpLink({
@@ -39,6 +42,22 @@ function App() {
             <Route
               path='/shop/products/:id'
               element={<OrderDetail />}
+            />
+            <Route
+              path='/'
+              element={<Home />}
+            />
+            <Route  
+              path='/gallery'
+              element={<Gallery />}
+            />
+            <Route  
+              path='/blog'
+              element={<Blog />}
+            />
+            <Route
+              path='/booking'
+              element={<Booking />}
             />
           </Routes>
         </div>

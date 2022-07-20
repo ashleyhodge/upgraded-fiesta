@@ -11,11 +11,11 @@ function ProductItem(item) {
     quantity
   } = item;
   return(
-    <div class="card flex flex-col max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 "> 
+    <div class="card flex flex-col max-w-sm bg-white rounded-lg border border-gray-200 shadow-md"> 
       <Link to={`products/${_id}`}>
         <img className="rounded-t-lg pb-3" src={`/images/${image}`} alt={name} />
       </Link>
-      <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white pb-3 text-center">
+      <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white pb-3 px-2 text-center">
         {name}
       </h5>
       <div className="flex items-center justify-center">

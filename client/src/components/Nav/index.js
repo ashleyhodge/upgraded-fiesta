@@ -44,19 +44,19 @@ function Nav() {
           " sm:justify-between sm:static fixed rounded-xl bottom-15 top-12 sm:flex sm:space-x-7 items-center sm:bg-transparent bg-purple-100  sm:w-full w-full sm:text-purple-100 text-white sm:space-y-0 space-y-5 p-2 transition-left"
         }>
                 <li>
-                    <a href="#" className="drop-shadow-lg shadow-black text-purple-50 dark:text-purple-50 hover:underline hover:text-white" aria-current="page">Home</a>
+                    <Link to="/" className="drop-shadow-lg shadow-black text-purple-50 dark:text-purple-50 hover:underline hover:text-white" aria-current="page">Home</Link>
                 </li>
                 <li>
                     <Link to="/shop" className="drop-shadow-lg shadow-black text-purple-50 dark:text-purple-50 hover:underline hover:text-white">Shop</Link>
                 </li>
                 <li>
-                    <a href="#" className="drop-shadow-lg shadow-black text-purple-50 dark:text-purple-50 hover:underline hover:text-white">Gallery</a>
+                    <Link to="/gallery" className="drop-shadow-lg shadow-black text-purple-50 dark:text-purple-50 hover:underline hover:text-white">Gallery</Link>
                 </li>
                 <li>
-                    <a href="#" className="drop-shadow-lg shadow-black text-purple-50 dark:text-purple-50 hover:underline hover:text-white">Blog</a>
+                    <Link to="/blog" className="drop-shadow-lg shadow-black text-purple-50 dark:text-purple-50 hover:underline hover:text-white">Blog</Link>
                 </li>
                 <li>
-                    <a href="#" className="drop-shadow-lg shadow-black text-purple-50 dark:text-purple-50 hover:underline hover:text-white">Book Astrological Reading!</a>
+                    <Link to="/booking" className="drop-shadow-lg shadow-black text-purple-50 dark:text-purple-50 hover:underline hover:text-white">Book Astrological Reading!</Link>
                 </li>
             </ul>
         </div>
